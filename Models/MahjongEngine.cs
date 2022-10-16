@@ -22,10 +22,7 @@ namespace MahjongApi.Models
             hands = new List<List<string>>();
             Initialize();
             
-            foreach (var item in tileDeck)
-            {
-                Console.WriteLine(item);
-            }
+            Console.WriteLine( tileDeck.Aggregate((tiles, tile) => tiles + " " + tile) );
 
             foreach (var hand in hands)
             {
