@@ -14,15 +14,15 @@ namespace MahjongApi.Controllers
         [HttpGet]
         public IEnumerable<MahjongEngine> Get()
         {
-            GameModel game = GameModel.Instance;
+            GameBrowserModel game = GameBrowserModel.Instance;
             return game.GetGames();
         }
 
         [HttpPost]
-        public void Post([FromBody]string player)
+        public void Post([FromBody]string name)
         {
-            GameModel game = GameModel.Instance;
-            game.NewGame();
+            GameBrowserModel game = GameBrowserModel.Instance;
+            game.NewGame(name);
             
         }
     }

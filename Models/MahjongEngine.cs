@@ -13,9 +13,12 @@ namespace MahjongApi.Models
         private List<string> discards;
         private List<List<string>> hands;
 
+        private string gameName;
 
-        public MahjongEngine(int id)
+
+        public MahjongEngine(int id, string name)
         {
+            gameName = name;
             gameId = id;
             players = new List<string>();
             tileDeck = new List<string>();
@@ -30,6 +33,11 @@ namespace MahjongApi.Models
                 Console.WriteLine( hand.Aggregate((tiles, tile) => tiles + " " + tile) );
             }
 
+        }
+
+        public override string ToString()
+        {
+            return gameName + " id: " + gameId;
         }
 
         public void AddPlayer( string name )

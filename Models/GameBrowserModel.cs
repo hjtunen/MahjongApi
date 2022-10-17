@@ -10,7 +10,7 @@ namespace MahjongApi.Models
         private List<MahjongEngine> games;
         private int idCounter;
 
-        private static GameModel? instance;
+        private static GameBrowserModel? instance;
 
         public GameBrowserModel()
         {
@@ -18,21 +18,21 @@ namespace MahjongApi.Models
             games = new List<MahjongEngine>();
         }
 
-        public static GameModel Instance
+        public static GameBrowserModel Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new GameModel();
+                    instance = new GameBrowserModel();
                 }
                 return instance;
             }
         }
 
-        public void NewGame()
+        public void NewGame(string name)
         {
-            games.Add( new MahjongEngine(idCounter) );
+            games.Add( new MahjongEngine(idCounter, name) );
             idCounter++;
         }
 

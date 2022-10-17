@@ -11,19 +11,6 @@ namespace MahjongApi.Controllers
     [Route("api/[controller]")]
     public class GameController : ControllerBase
     {
-        [HttpGet]
-        public IEnumerable<MahjongEngine> Get()
-        {
-            GameModel game = GameModel.Instance;
-            return game.GetGames();
-        }
 
-        [HttpPost]
-        public void Post([FromBody]string player)
-        {
-            GameModel game = GameModel.Instance;
-            game.NewGame();
-            
-        }
     }
 }
