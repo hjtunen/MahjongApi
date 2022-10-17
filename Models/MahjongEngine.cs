@@ -7,7 +7,7 @@ namespace MahjongApi.Models
 {
     public class MahjongEngine
     {
-        private int gameId;
+        public int gameId { get; }
         private List<string> players;
         private List<string> tileDeck;
         private List<string> discards;
@@ -37,7 +37,7 @@ namespace MahjongApi.Models
 
         public override string ToString()
         {
-            return "name: " + gameName + " id: " + gameId;
+            return "name: " + gameName + " id: " + gameId + " players: " + players.Count + "/4";
         }
 
         public void AddPlayer( string name )

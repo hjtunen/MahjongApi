@@ -49,5 +49,16 @@ namespace MahjongApi.Models
             }
             return temp;
         }
+
+        public void JoinGame(int id, string name)
+        {
+            foreach (var game in games)
+            {
+                if (game.gameId == id)
+                {
+                    game.AddPlayer(name);
+                }
+            }
+        }
     }
 }

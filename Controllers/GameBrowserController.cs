@@ -25,5 +25,13 @@ namespace MahjongApi.Controllers
             game.NewGame(name);
             
         }
+
+        [HttpPut("{id}")]
+        public void PutJoinGame(int id, [FromBody]string name)
+        {
+            GameBrowserModel game = GameBrowserModel.Instance;
+            game.JoinGame(id, name);
+            
+        }
     }
 }
