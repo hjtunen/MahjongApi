@@ -7,15 +7,16 @@ namespace MahjongApi.Models
 {
     public class MahjongEngine
     {
-        private int gameId { get; set; }
+        private int gameId;
         private List<string> players;
         private List<string> tileDeck;
         private List<string> discards;
         private List<List<string>> hands;
 
 
-        public MahjongEngine()
+        public MahjongEngine(int id)
         {
+            gameId = id;
             players = new List<string>();
             tileDeck = new List<string>();
             discards = new List<string>();

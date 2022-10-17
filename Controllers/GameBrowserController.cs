@@ -9,7 +9,7 @@ namespace MahjongApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class GameController : ControllerBase
+    public class GameBrowserController : ControllerBase
     {
         [HttpGet]
         public IEnumerable<MahjongEngine> Get()

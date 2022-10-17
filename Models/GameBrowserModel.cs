@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 
 namespace MahjongApi.Models
 {
-    public class GameModel
+    public class GameBrowserModel
     {
         private List<MahjongEngine> games;
         private int idCounter;
 
         private static GameModel? instance;
 
-        public GameModel()
+        public GameBrowserModel()
         {
             idCounter = 0;
             games = new List<MahjongEngine>();
