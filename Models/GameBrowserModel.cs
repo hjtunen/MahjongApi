@@ -36,9 +36,18 @@ namespace MahjongApi.Models
             idCounter++;
         }
 
-        public List<MahjongEngine> GetGames()
+        public List<string> GetGames()
         {
-            return games;
+            var temp = new List<string>();
+            foreach (var game in games)
+            {
+                temp.Add(game.ToString());
+            }
+            if (temp.Count == 0)
+            {
+                temp.Add("");
+            }
+            return temp;
         }
     }
 }

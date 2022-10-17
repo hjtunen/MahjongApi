@@ -12,7 +12,7 @@ namespace MahjongApi.Controllers
     public class GameBrowserController : ControllerBase
     {
         [HttpGet]
-        public IEnumerable<MahjongEngine> Get()
+        public IEnumerable<string> Get()
         {
             GameBrowserModel game = GameBrowserModel.Instance;
             return game.GetGames();

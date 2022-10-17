@@ -37,7 +37,7 @@ namespace MahjongApi.Models
 
         public override string ToString()
         {
-            return gameName + " id: " + gameId;
+            return "name: " + gameName + " id: " + gameId;
         }
 
         public void AddPlayer( string name )
