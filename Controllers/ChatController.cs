@@ -26,7 +26,6 @@ namespace MahjongApi.Controllers
             ChatSingleton chat = ChatSingleton.Instance;
 
             chat.AddMessage(m);
-            //return new OkObjectResult(true);
         }
     }
 }
